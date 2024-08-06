@@ -1,0 +1,130 @@
+:root {
+  --background-color: #f0f0f1;
+  --text-color: #333;
+  --button-bg-color: #007bff;
+  --button-text-color: #ffffff;
+  --feedback-bg-color: #d1e7dd;
+  --feedback-text-color: #0f5132;
+  --modal-bg-color: #ffffff;
+  --modal-border-color: #ccc;
+  --modal-shadow: rgba(0, 0, 0, 0.2);
+}
+
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 100%;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+}
+
+nav button {
+  background: none;
+  color: inherit;
+  border: 1px solid var(--button-text-color);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav button:hover {
+  background: var(--button-text-color);
+  color: var(--button-bg-color);
+}
+
+.notifications-modal {
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  background-color: var(--modal-bg-color);
+  border: 1px solid var(--modal-border-color);
+  padding: 1rem;
+  box-shadow: 0 2px 4px var(--modal-shadow);
+  z-index: 10;
+  border-radius: 4px;
+}
+
+aside {
+  background: var(--background-color);
+  padding: 1rem;
+  width: 100%;
+}
+
+aside button {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  cursor: pointer;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+aside button:hover {
+  background-color: darken(var(--button-bg-color), 10%);
+}
+
+main {
+  padding: 1rem;
+  width: 100%;
+}
+
+main form {
+  margin-bottom: 2rem;
+}
+
+main input, main button {
+  margin: 0.5rem 0;
+  display: block;
+  width: 100%;
+}
+
+main button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.feedback-message {
+  background-color: var(--feedback-bg-color);
+  color: var(--feedback-text-color);
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .admin-dashboard, nav, aside, main {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  nav, aside {
+    padding: 0.5rem;
+  }
+
+  .notifications-modal {
+    width: 90%;
+    left: 5%;
+    transform: translate(0, 0); /* Adjust modal positioning on small screens */
+  }
+}

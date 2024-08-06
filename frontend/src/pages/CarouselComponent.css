@@ -1,0 +1,13 @@
+
+
+.carousel-container {
+  max-width: 600px; /* Or whatever fits your design */
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-container img {
+  width: 100%;
+  object-fit: cover; /* Cover the area, might crop */
+  /* For no cropping but potential letterboxing, use 'contain' */
+}
