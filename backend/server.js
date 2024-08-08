@@ -15,7 +15,7 @@ app.use(cors());
 app.use(express.json()); // for parsing application/json
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://Saketh:1234@cluster0.xmxwqkz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+mongoose.connect('mongodb+srv://saketh:saketh@cluster0.re5l8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 .then(() => console.log('Connected to MongoDB'))
 .catch(err => console.error('Could not connect to MongoDB', err));
 
